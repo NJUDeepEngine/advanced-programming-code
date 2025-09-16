@@ -1,0 +1,26 @@
+CXX 		:= g++
+CXXFLAGS 	:= -std=c++17 -O2 -Wall -Wextra -pedantic
+BIN 		:= bin
+
+SHELL 		:= cmd.exe
+PWD 		:= $(subst /,\,$(CURDIR))
+
+# 查找所有源文件
+SRC 		:= $(shell dir /B /X "*.cpp" /s)
+EXES 		:= $(patsubst $(PWD)\\%,$(BIN)\\%,$(SRC:.cpp=.exe))
+
+md:
+	@mkdir $(dir $(EXES))
+
+$(BIN)\\%.exe: $(PWD)\%.cpp
+# 	-@mkdir $(dir $@) 2>nul
+	$(CXX) $(CXXFLAGS) $< -o $@
+
+all: $(EXES)
+# 	@echo "$(EXES)"
+	@echo Executing 'all' complete
+
+clean:
+	del "*.exe" /s
+
+.PHONY: all clean md
