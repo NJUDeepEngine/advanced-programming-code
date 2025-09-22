@@ -19,7 +19,8 @@ clean:
 classes: $(filter $(BIN)/src/01_classes_and_objects/%,$(EXES))
 this-pointer: $(filter $(BIN)/src/02_this_pointer/%,$(EXES))
 constructors: $(filter $(BIN)/src/03_constructors_destructors/%,$(EXES))
+inheritance: $(filter $(BIN)/src/04_oop_inheritance/%,$(EXES))
 virtual-polymorphism: $(filter $(BIN)/src/05_cpp_virtual_polymorphism_demo/%,$(EXES))
 examples: $(filter $(BIN)/examples/%,$(EXES))
 
-.PHONY: all clean classes this-pointer constructors virtual-polymorphism examples
+.PHONY: all clean classes this-pointer constructors inheritance virtual-polymorphism examples
