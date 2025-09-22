@@ -1,0 +1,1 @@
+add_executable(interface_isolation_demo main.cpp)

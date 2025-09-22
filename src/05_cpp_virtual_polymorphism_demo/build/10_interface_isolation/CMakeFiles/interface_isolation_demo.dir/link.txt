@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk -mmacosx-version-min=15.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/interface_isolation_demo.dir/main.cpp.o -o interface_isolation_demo 
